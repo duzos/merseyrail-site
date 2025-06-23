@@ -115,6 +115,13 @@ html, body {
     height: 12vh;
 }
 
+@media only screen
+and (max-device-width: 600px) {
+    #train {
+        max-height: 75px;
+    }
+}
+
 #train.right {
     left: 200vw;
     transition: none;
