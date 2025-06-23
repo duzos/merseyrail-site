@@ -41,12 +41,17 @@ function toRight() {
 }
 
 function toStation() {
-    state = 'toCenter';
-    setTrainState(train, 'center');
+    state = 'toStation';
+    setTrainState(train, 'station');
+}
+
+function toDisplay() {
+    state = 'toDisplay';
+    setTrainState(train, "center");
 }
 
 const train = document.getElementById('train');
-let state = 'toCenter';
+let state = 'toStation';
 
 train.addEventListener('transitionend', (e) => {
     if (e.propertyName === 'left') {

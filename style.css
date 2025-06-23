@@ -36,6 +36,7 @@ body {
 .history-container button:hover {
     background: #ffb700;
 }
+
 #segment {
     width: 100vw;
     height: auto;
@@ -52,7 +53,7 @@ body {
     position: absolute;
     left: 0;
     bottom: 11.5%;
-    transition: left 10s cubic-bezier(0.33, 1, 0.68, 1);
+    transition: left 10s cubic-bezier(0.66, 0, 0.34, 1);
     width: 100vw;
     height: 10vh;
 }
@@ -62,9 +63,13 @@ body {
     transition: none;
 }
 
-#train.center {
+#train.station {
     left: -60vw;
     transition: left 10s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+#train.center {
+    left: 0;
 }
 
 #train.left {
