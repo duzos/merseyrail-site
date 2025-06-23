@@ -1,17 +1,29 @@
 body {
 	margin: 0;
-	overflow: hidden;
-	height: 100vh;
-	background: #f0f0f0;
+	overflow-x: hidden;
+	position: relative;
+	background: #92d0ff;
+}
+
+#segment {
+    width: 100vw;
+    height: auto; 
+    display: block;
+}
+
+.blank-block {
+    height: 100vh;
+    width: 100vw;
+    background: transparent;
 }
 
 #train {
     position: absolute;
-    top: 50%;
-    transform: translateY(-100%);
+    left: 0;
+    bottom: 5.5%;
     transition: left 10s;
-    width: 1920px;
-    height: 100px;
+    width: calc(1920px * 2);
+    height: 200px;
     transition: left 10s ease-in-out;
 }
 
@@ -21,11 +33,11 @@ body {
 }
 
 #train.center {
-    left: calc(25vw - 1440px);
+    left: calc(25vw - 2880px);
     transition: left 10s ease-in-out;
 }
 
 #train.left {
-    left: calc(-1920px * 2);
+    left: calc(-1920px * 4);
     transition: left 10s ease-in-out;
 }

@@ -7,35 +7,46 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <img id="train" src="img/777.png" alt="777 Class Train" />
+    <img id="segment" src="img/header.png", alt="Merseyrail text">
+    <div class="blank-block"></div>
+    <img id="segment" src="img/station.png", alt="Merseyrail station">
+    <img id="train" src="img/777.png" alt="777 Class Train"/>
     <script>
-        const trains = [
-            { el: document.getElementById('train'), width: 1920 },
-        ];
         const moveDuration = 10000; // ms
         const pauseDuration = 15000; // ms
 
-        function setClassAll(className) {
-            trains.forEach(train => train.el.className = className);
+        function setClass(train, className) {
+            train.className = className;
         }
 
-        function startAnimation() {
-            setClassAll('right');
+        let is777 = true;
+
+        function swapImage(train) {
+            is777 = !is777;
+            train.src = is777 ? 'img/777.png' : 'img/507.png';
+            train.alt = is777 ? '777 Class Train' : '507 Class Train';
+        }
+
+        function animateTrain(train, delay = 0) {
             setTimeout(() => {
-                setClassAll('center');
+                // Swap image every time it moves to the right
+                swapImage(train);
+                setClass(train, 'right');
                 setTimeout(() => {
-                    setClassAll('left');
+                    setClass(train, 'center');
                     setTimeout(() => {
-                        setClassAll('right');
-                        startAnimation();
-                    }, moveDuration);
-                }, pauseDuration);
-            }, 100);
+                        setClass(train, 'left');
+                        setTimeout(() => {
+                            // Swap image again when returning to right
+                            setClass(train, 'right');
+                            animateTrain(train, 0);
+                        }, moveDuration);
+                    }, pauseDuration);
+                }, 100);
+            }, delay);
         }
 
-        // Set initial state and start animation
-        setClassAll('right');
-        setTimeout(startAnimation, 100);
+        animateTrain(document.getElementById('train'))
     </script>
 </body>
 </html>
