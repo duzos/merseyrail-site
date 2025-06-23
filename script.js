@@ -61,6 +61,14 @@ train.addEventListener('transitionend', (e) => {
     }
 });
 
+const loopCheckbox = document.getElementById('loop-checkbox');
+
+setInterval(() => {
+    if (state === "toStation" && loopCheckbox.checked) {
+        nextClass();
+    }
+}, 15000)
+
 // INIT
 toStation();
 setClass(train, trains[currentClass]);
