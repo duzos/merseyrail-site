@@ -5,9 +5,16 @@ body {
 	background: #92d0ff;
 }
 
+.track-container {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    display: block;
+}
+
 #segment {
     width: 100vw;
-    height: auto; 
+    height: auto;
     display: block;
 }
 
@@ -20,11 +27,10 @@ body {
 #train {
     position: absolute;
     left: 0;
-    bottom: 5.5%;
-    transition: left 10s;
-    width: calc(1920px * 2);
-    height: 200px;
+    bottom: 11.5%; 
     transition: left 10s ease-in-out;
+    width: 100vw;
+    height: 10vh;
 }
 
 #train.right {
@@ -33,11 +39,11 @@ body {
 }
 
 #train.center {
-    left: calc(25vw - 2880px);
+    left: -50vw;
     transition: left 10s ease-in-out;
 }
 
 #train.left {
-    left: calc(-1920px * 4);
+    left: -200vw;
     transition: left 10s ease-in-out;
 }
