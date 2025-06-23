@@ -12,6 +12,30 @@ body {
     display: block;
 }
 
+.history-container {
+    position: fixed;
+    right: 2vw;
+    bottom: 2vh;
+    display: flex;
+    gap: 1vw;
+    z-index: 1000;
+}
+
+.history-container button {
+    padding: 0.7em 1.5em;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 0.4em;
+    background: #ffd700;
+    color: #222;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: background 0.2s;
+}
+
+.history-container button:hover {
+    background: #ffb700;
+}
 #segment {
     width: 100vw;
     height: auto;
@@ -27,8 +51,8 @@ body {
 #train {
     position: absolute;
     left: 0;
-    bottom: 11.5%; 
-    transition: left 10s ease-in-out;
+    bottom: 11.5%;
+    transition: left 10s cubic-bezier(0.33, 1, 0.68, 1);
     width: 100vw;
     height: 10vh;
 }

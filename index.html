@@ -12,62 +12,12 @@
     <div class="track-container">
         <img id="segment" src="img/station.png" alt="Merseyrail station">
         <img id="train" src="img/train/777.png" alt="777 Class Train"/>
+        <div class="history-container">
+            <button id="prev-btn" onclick="previousClass()">Previous</button>
+            <button id="next-btn" onclick="nextClass()">Next</button>
+            <button onclick="toLeft()">Depart</button>
+        </div>
     </div>
-    <script>
-const pauseDuration = 5000; // ms
-
-function setClass(train, className) {
-    train.className = className;
-}
-
-let is777 = true;
-
-function swapImage(train) {
-    is777 = !is777;
-    train.src = is777 ? 'img/train/777.png' : 'img/train/507.png';
-    train.alt = is777 ? '777 Class Train' : '507 Class Train';
-}
-
-const train = document.getElementById('train');
-let state = 'init';
-
-function nextStep() {
-    switch (state) {
-        case 'init':
-            swapImage(train);
-            setClass(train, 'right');
-            state = 'toCenter';
-            requestAnimationFrame(() => setClass(train, 'center'));
-            break;
-        case 'toCenter':
-            state = 'pauseCenter';
-            setTimeout(() => {
-                setClass(train, 'left');
-                state = 'toLeft';
-            }, pauseDuration);
-            break;
-        case 'toLeft':
-            state = 'toRight';
-            setClass(train, 'right');
-            void train.offsetWidth;
-            requestAnimationFrame(() => {
-                swapImage(train);
-                setClass(train, 'center');
-                state = 'toCenter';
-            });
-            break;
-    }
-}
-
-train.addEventListener('transitionend', (e) => {
-    if (e.propertyName === 'left') {
-        nextStep();
-    }
-});
-
-// Start animation
-state = 'init';
-nextStep();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
