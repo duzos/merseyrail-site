@@ -11,7 +11,7 @@
     <div class="blank-block"></div>
     <div class="track-container">
         <img id="segment" src="img/station.png" alt="Merseyrail station">
-        <img id="train" src="img/777.png" alt="777 Class Train"/>
+        <img id="train" src="img/train/777.png" alt="777 Class Train"/>
     </div>
     <script>
 const pauseDuration = 5000; // ms
@@ -24,7 +24,7 @@ let is777 = true;
 
 function swapImage(train) {
     is777 = !is777;
-    train.src = is777 ? 'img/777.png' : 'img/507.png';
+    train.src = is777 ? 'img/train/777.png' : 'img/train/507.png';
     train.alt = is777 ? '777 Class Train' : '507 Class Train';
 }
 

@@ -39,11 +39,11 @@ body {
 }
 
 #train.center {
-    left: -50vw;
-    transition: left 10s ease-in-out;
+    left: -60vw;
+    transition: left 10s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 #train.left {
-    left: -200vw;
-    transition: left 10s ease-in-out;
+    left: -100vw;
+    transition: left 3s cubic-bezier(0.32, 0, 0.67, 0);
 }
