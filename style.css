@@ -1,0 +1,31 @@
+body {
+	margin: 0;
+	overflow: hidden;
+	height: 100vh;
+	background: #f0f0f0;
+}
+
+#train {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    transition: left 10s;
+    width: 1920px;
+    height: 100px;
+    transition: left 10s ease-in-out;
+}
+
+#train.right {
+    left: 200vw;
+    transition: none;
+}
+
+#train.center {
+    left: calc(25vw - 1440px);
+    transition: left 10s ease-in-out;
+}
+
+#train.left {
+    left: calc(-1920px * 2);
+    transition: left 10s ease-in-out;
+}
