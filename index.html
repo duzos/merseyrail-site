@@ -12,9 +12,18 @@
     <div class="track-container">
         <img id="segment" src="img/station.png" alt="Merseyrail station">
         <img id="train" src="img/train/777.png" alt="777 Class Train"/>
+        <button onclick="previousClass()" id="arrow-left" class="arrow-btn">&#8592;</button>
+        <div class="information-container">
+            <div class="info-image">
+                <img id="information-photo" alt="Info Image" />
+            </div>
+            <div class="info-text">
+                <div id="information-title">Title</div>
+                <div id="information-years">Years</div>
+            </div>
+        </div>
+        <button onclick="nextClass()" id="arrow-right" class="arrow-btn">&#8594;</button>
         <div class="history-container">
-            <button id="prev-btn" onclick="previousClass()">Previous</button>
-            <button id="next-btn" onclick="nextClass()">Next</button>
             <button onclick="toStation()">Station</button>
             <button onclick="toLeft()">Depart</button>
             <button onclick="toDisplay()">Display</button>
@@ -22,6 +31,6 @@
             <label for="loop-checkbox"></label>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="train.js"></script>
 </body>
 </html>
