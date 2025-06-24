@@ -240,3 +240,80 @@ and (max-device-width: 600px) {
     left: -100vw;
     transition: left 3s cubic-bezier(0.32, 0, 0.67, 0);
 }
+
+#segment {
+    position: relative; /* Ensure the parent is positioned */
+}
+
+.video-section {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    height: 40vh;
+    margin: 0;
+    z-index: 10;
+    border-radius: 1em;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none;
+    z-index: 1;
+}
+
+.video-darken {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    z-index: 2;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.video-overlay h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.jobs-btn {
+    background: #FFD600;
+    color: #222;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 32px;
+    padding: 16px 40px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.jobs-btn:hover {
+    background: #FFC400;
+}
