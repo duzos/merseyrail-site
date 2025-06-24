@@ -20,7 +20,7 @@ class Train {
 
 const trains = [new Train(54, 1825, 1857, "Locomotion No. 1", "20vw", "24vh", "10vw", "10vw"), new Train(1904, 1904, 1964, "1904 L&Y Railway EMUs"), new Train(502, 1939, 1980), new Train(507, 1978, 2024), new Train(777, 2024, "Present")]
 
-let currentClass = 0;
+let currentClass = trains.length - 1;
 let queuedClass = currentClass;
 
 function getCurrentTrain() {
