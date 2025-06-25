@@ -33,7 +33,6 @@ html, body {
     text-align: center;
     font-weight: bold;
     z-index: 1000;
-
 }
 
 .history-container {
@@ -67,10 +66,10 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    right: 50%;
-    bottom: 35%;
+    left: 20%;
+    bottom: 40%;
     transform: translate(50%, 50%);
-    width: 25vw;
+    width: 30vw;
     height: 12vh;
     text-align: center;
 }
@@ -87,6 +86,8 @@ html, body {
     align-items: center;
     padding: 0.5em 1em;
     box-sizing: border-box;
+    color: white;
+    font-size: clamp(1em, 2vw, 2em);
 }
 
 .info-image {
@@ -125,8 +126,8 @@ html, body {
 
 .arrow-btn {
     position: absolute;
-    right: 50%;
-    bottom: 35%;
+    left: 15%;
+    bottom: 40%;
     transform: translate(50%, 50%);
     background: #ffd700;
     border: none;
@@ -145,15 +146,29 @@ html, body {
 }
 
 #arrow-left {
-    left: calc(50% - 15vw - 2.5em);
+    left: calc(45% - 12vw - 2.5em);
 }
 
 #arrow-right {
-    left: calc(50% + 15vw - 1.5em);
+    left: calc(45% + 22vw - 1.5em);
 }
 
 .arrow-btn:hover {
     background: #ffb700;
+}
+
+.description-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 15%;
+    bottom: 40%;
+    transform: translate(50%, 50%);
+    width: 25vw;
+    height: 12vh;
+    text-align: center;
 }
 
 #loop-checkbox {
@@ -366,7 +381,7 @@ and (max-device-width: 600px) {
     top: 5%;
     left: 1%;
     font-family: 'Ticketing', sans-serif;
-    font-size: 3.5vw;
+    font-size: 2.75vw;
     color: #fff;
     z-index: 2;
 }
@@ -376,7 +391,7 @@ and (max-device-width: 600px) {
     top: 5%;
     right: 1%;
     font-family: 'Ticketing', sans-serif;
-    font-size: 3.5vw;
+    font-size: 2.75vw;
     color: #fff;
     z-index: 2;
 }
