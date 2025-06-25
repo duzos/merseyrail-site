@@ -332,15 +332,15 @@ and (max-device-width: 600px) {
 }
 
 .video-section {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 35.3vw;
     height: 60%;
     margin: 0;
-    z-index: 10;
     overflow: hidden;
+}
+
+.video-section video {
+    width: 100%;
+    height: 14.4vw;
+    object-fit: cover;
 }
 
 .background-video {
@@ -378,18 +378,17 @@ and (max-device-width: 600px) {
     color: #fff;
 }
 .video-overlay h1 {
-    font-size: 3.5vw;
+    font-size: 2.5vw;
     font-weight: bold;
     text-shadow: 0 2px 8px rgba(0,0,0,0.7);
     margin-top: 0;
     position: relative;
-    top: -0.5vw;
 }
 
 .jobs-btn {
     background: #FFD600;
     color: #222;
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     font-weight: bold;
     border: none;
     border-radius: 32px;
@@ -397,7 +396,7 @@ and (max-device-width: 600px) {
     cursor: pointer;
     transition: background 0.2s;
     text-decoration: none;
-    margin-top: 3.5em;
+    margin-top: 2.5em;
 }
 
 .jobs-btn:hover {
@@ -479,6 +478,15 @@ and (max-device-width: 600px) {
     z-index: 2;
 }
 
+.ticket .about {
+    position: absolute;
+    top: 20%;
+    left: 1%;
+    font-size: 1.5vw;
+    color: black;
+    z-index: 2;
+    width: 100%;
+}
 
 .ticket ul {
     gap: 1em;
@@ -490,7 +498,75 @@ and (max-device-width: 600px) {
     position: absolute;
     bottom: 5%;
     left: 1%;
-    width: 5%;
-    height: auto;
+    height: 10%;
     z-index: 3;
+}
+
+.ticket-small {
+    width: 32vw;
+    height: 24vw;
+    border-radius: 1.25vw;
+}
+
+.ticket-small .title-left,
+.ticket-small .title-right {
+    font-size: 2vw;
+}
+
+.ticket-small .title-middle {
+    padding-left: 5vw;
+    width: 25vw;
+    font-size: 1.5vw
+}
+
+.ticket-small .about-left,
+.ticket-small .about-right,
+.ticket-small .about {
+    font-size: 0.8vw;
+}
+
+.ticket-small ul {
+    font-size: 1.5vw;
+    gap: 0.4vw;
+}
+
+.tickets-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1vw;
+}
+
+@media (max-width: 1000px) {
+    .tickets-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 4vw;
+    }
+    .ticket-small {
+        width: 90vw;
+        height: 60vw;
+        border-radius: 4vw;
+    }
+    .ticket-small .title-left,
+    .ticket-small .title-right,
+    .ticket-small .title-middle {
+        font-size: 6vw;
+    }
+    .ticket-small .about-left,
+    .ticket-small .about-right,
+    .ticket-small .about {
+        font-size: 4vw;
+    }
+    .ticket-small ul {
+        font-size: 4vw;
+        gap: 2vw;
+    }
+
+    .video-section video {
+        height: 36vw;
+    }
 }
