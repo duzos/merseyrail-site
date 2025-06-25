@@ -17,16 +17,16 @@ html, body {
 }
 
 .railway-title {
-    width: 65% !important;
-    margin: 0 0 0.5em 0; 
+    width: 100% !important;
+    margin: 0 0 0.5em 0;
     padding: 0.5em 0 0.3em 0;
-    font-size: clamp(2.5em, 3vw, 4em); 
+    font-size: clamp(2.5em, 3vw, 4em);
     font-weight: 800;
     text-align: left;
     letter-spacing: 0.02em;
     line-height: 1.05;
     overflow-wrap: break-word;
-    transform: translate(1.25em, -35vw);
+    transform: translateY(-35vw);
 }
 
 .railway-info-container {
@@ -73,7 +73,7 @@ html, body {
     bottom: 25.25%;
     left: 25.25%;
     transform: translateX(-50%);
-    font-size: clamp(0.8em, 1vw, 1.4em);
+    font-size: clamp(0.5em, 1vw, 1.4em);
     color: #222;
     text-align: center;
     font-weight: bold;
@@ -83,15 +83,15 @@ html, body {
 .history-container {
     position: absolute;
     right: 2vw;
-    bottom: 2vh;
+    bottom: 2vw;
     display: flex;
     gap: 1vw;
     z-index: 1000;
 }
 
 .history-container button {
-    padding: 0.7em 1.5em;
-    font-size: 1.1em;
+    padding: 1vw 2vw;
+    font-size: 2vw;
     border: none;
     border-radius: 0.4em;
     background: #ffd700;
@@ -115,7 +115,7 @@ html, body {
     bottom: 40%;
     transform: translate(50%, 50%);
     width: 30vw;
-    height: 12vh;
+    height: 12vw;
     text-align: center;
 }
 
@@ -220,36 +220,42 @@ html, body {
 }
 
 #loop-checkbox {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 #loop-checkbox + label {
     position: relative;
-    padding-left: 2.2em;
+    padding-left: 6vw;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 1.1vw;
     user-select: none;
     color: #222;
-    line-height: 2.2em;
-    height: 2.2em;
+    line-height: 4vw;
+    height: 4vw;
     display: flex;
     align-items: center;
     font-weight: 600;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.03vw;
+    border: 0.4vw solid #ffd700;
+    border-radius: 0.6vw;
+    background: #ffd700;
+    box-shadow: 0 0.4vw 1.6vw rgba(0,0,0,0.08);
 }
 
 #loop-checkbox + label::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-40%);
-    width: 2.5em;
-    height: 2.25em;
-    border: 2px solid #ffd700;
-    border-radius: 0.3em;
+    top: 45%;
+    transform: translateY(-45%);
+    width: 4.5vw;
+    height: 4vw;
+    border: 0.4vw solid #ffd700;
+    border-radius: 0.6vw;
     background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     transition: background 0.2s, border-color 0.2s;
     display: flex;
     align-items: center;
@@ -259,12 +265,12 @@ html, body {
 #loop-checkbox:checked + label::after {
     content: "";
     position: absolute;
-    left: 1em;
-    top: 0.6em;
-    width: 0.6em;
-    height: 1em;
+    left: 1.5vw;
+    top: 10%;
+    width: 1.2vw;
+    height: 2.5vw;
     border: solid #222;
-    border-width: 0 0.22em 0.22em 0;
+    border-width: 0 0.44vw 0.44vw 0;
     transform: rotate(45deg);
     pointer-events: none;
 }
@@ -272,7 +278,6 @@ html, body {
 /* Checked state background */
 #loop-checkbox:checked + label::before {
     background: #ffd700;
-    border-color: #ffb700;
 }
 
 #segment {
@@ -293,7 +298,7 @@ html, body {
     bottom: 11.5%;
     transition: left 10s cubic-bezier(0.66, 0, 0.34, 1);
     width: 100vw;
-    height: 12vh;
+    height: 25vw;
 }
 
 @media only screen
@@ -378,7 +383,7 @@ and (max-device-width: 600px) {
     text-shadow: 0 2px 8px rgba(0,0,0,0.7);
     margin-top: 0;
     position: relative;
-    top: -1vw;
+    top: -0.5vw;
 }
 
 .jobs-btn {
@@ -388,7 +393,7 @@ and (max-device-width: 600px) {
     font-weight: bold;
     border: none;
     border-radius: 32px;
-    padding: 16px 40px;
+    padding: 1.1vw 2.8vw;
     cursor: pointer;
     transition: background 0.2s;
     text-decoration: none;
@@ -403,7 +408,7 @@ and (max-device-width: 600px) {
 
 .ticket {
     width: 100vw;
-    height: 60vh;
+    height: 30vw;
     background: #F85007;
     display: flex;
     border: none;

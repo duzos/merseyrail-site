@@ -1,5 +1,5 @@
 class Train {
-    constructor(cId, startService, endService, title = `Class ${cId}`, width = "100vw", height = "12vh", stationPosition, displayPosition, sound = `img/train/${cId}/departure.mp3`, photo = `img/train/${cId}/photo.png`, src = `img/train/${cId}/diagram.png`) {
+    constructor(cId, startService, endService, title = `Class ${cId}`, width = "100vw", height = "6vw", stationPosition, displayPosition, sound = `img/train/${cId}/departure.mp3`, photo = `img/train/${cId}/photo.png`, src = `img/train/${cId}/diagram.png`) {
         this.cId = cId;
         this.width = width;
         this.height = height;
@@ -18,7 +18,7 @@ class Train {
     }
 }
 
-const trains = [new Train(54, 1825, 1857, "Locomotion No. 1", "20vw", "24vh", "10vw", "10vw"), new Train(1904, 1904, 1964, "1904 L&Y Railway EMUs"), new Train(502, 1939, 1980), new Train(507, 1978, 2024), new Train(777, 2024, "Present")]
+const trains = [new Train(54, 1825, 1857, "Locomotion No. 1", "20vw", "10vw", "10vw", "10vw"), new Train(1904, 1904, 1964, "1904 L&Y Railway EMUs"), new Train(502, 1939, 1980), new Train(507, 1978, 2024), new Train(777, 2024, "Present")]
 
 let currentClass = trains.length - 1;
 let queuedClass = currentClass;
