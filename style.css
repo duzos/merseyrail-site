@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+@font-face {
+    font-family: "Ticketing";
+    src: url("font/Ticketing.ttf") format("truetype");
+}
+
 html, body, * {
     font-family: 'Inter', Arial, sans-serif;
 }
@@ -247,15 +252,13 @@ and (max-device-width: 600px) {
 
 .video-section {
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 35vw;
-    height: 40vh;
+    width: 50%;
+    height: 60%;
     margin: 0;
     z-index: 10;
-    border-radius: 1em;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     overflow: hidden;
 }
 
@@ -292,13 +295,13 @@ and (max-device-width: 600px) {
     align-items: center;
     justify-content: center;
     color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 .video-overlay h1 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 24px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 .jobs-btn {
@@ -316,4 +319,84 @@ and (max-device-width: 600px) {
 
 .jobs-btn:hover {
     background: #FFC400;
+}
+
+/* Ticket */
+
+.ticket {
+    width: 100vw;
+    height: 60vh;
+    background: #F85007;
+    display: flex;
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ticket::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: #fff;
+    z-index: 1;
+}
+
+.ticket .title-left {
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    font-family: 'Ticketing', sans-serif;
+    font-size: 3.5em;
+    color: #fff;
+    z-index: 2;
+}
+
+.ticket .title-right {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    font-family: 'Ticketing', sans-serif;
+    font-size: 3.5em;
+    color: #fff;
+    z-index: 2;
+}
+
+.ticket .about-left {
+    position: absolute;
+    top: 20%;
+    left: 1%;
+    font-size: 1.75em;
+    color: black;
+    z-index: 2;
+    width: 45%;
+}
+
+.ticket .about-right {
+    position: absolute;
+    top: 20%;
+    right: 1%;
+    font-size: 1.75em;
+    color: black;
+    z-index: 2;
+}
+
+
+.ticket ul {
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket .logo {
+    position: absolute;
+    bottom: 5%;
+    left: 1%;
+    width: 5%;
+    height: auto;
+    z-index: 3;
 }
