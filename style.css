@@ -23,6 +23,19 @@ html, body {
     display: block;
 }
 
+.track-container .station-name {
+    position: absolute;
+    bottom: 25.25%;
+    left: 25.25%;
+    transform: translateX(-50%);
+    font-size: clamp(0.8em, 1vw, 1.4em);
+    color: #222;
+    text-align: center;
+    font-weight: bold;
+    z-index: 1000;
+
+}
+
 .history-container {
     position: absolute;
     right: 2vw;
