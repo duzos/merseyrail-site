@@ -255,8 +255,8 @@ and (max-device-width: 600px) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    height: 60%;
+    width: 35.3vw;
+    height: 70%;
     margin: 0;
     z-index: 10;
     overflow: hidden;
@@ -296,18 +296,19 @@ and (max-device-width: 600px) {
     justify-content: center;
     color: #fff;
 }
-
 .video-overlay h1 {
-    font-size: 2rem;
+    font-size: 3.5vw;
     font-weight: bold;
-    margin-bottom: 24px;
     text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    margin-top: 0;
+    position: relative;
+    top: -1vw;
 }
 
 .jobs-btn {
     background: #FFD600;
     color: #222;
-    font-size: 1rem;
+    font-size: 1.5vw;
     font-weight: bold;
     border: none;
     border-radius: 32px;
@@ -315,6 +316,7 @@ and (max-device-width: 600px) {
     cursor: pointer;
     transition: background 0.2s;
     text-decoration: none;
+    margin-top: 3.5em;
 }
 
 .jobs-btn:hover {
@@ -351,7 +353,7 @@ and (max-device-width: 600px) {
     top: 5%;
     left: 1%;
     font-family: 'Ticketing', sans-serif;
-    font-size: 3.5em;
+    font-size: 3.5vw;
     color: #fff;
     z-index: 2;
 }
@@ -361,7 +363,7 @@ and (max-device-width: 600px) {
     top: 5%;
     right: 1%;
     font-family: 'Ticketing', sans-serif;
-    font-size: 3.5em;
+    font-size: 3.5vw;
     color: #fff;
     z-index: 2;
 }
@@ -370,7 +372,7 @@ and (max-device-width: 600px) {
     position: absolute;
     top: 20%;
     left: 1%;
-    font-size: 1.75em;
+    font-size: 1.5vw;
     color: black;
     z-index: 2;
     width: 45%;
@@ -380,7 +382,7 @@ and (max-device-width: 600px) {
     position: absolute;
     top: 20%;
     right: 1%;
-    font-size: 1.75em;
+    font-size: 1.5vw;
     color: black;
     z-index: 2;
 }
