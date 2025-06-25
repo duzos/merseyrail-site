@@ -332,7 +332,7 @@ and (max-device-width: 600px) {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 35.3vw;
-    height: 70%;
+    height: 60%;
     margin: 0;
     z-index: 10;
     overflow: hidden;
@@ -446,7 +446,7 @@ and (max-device-width: 600px) {
 
 .ticket .title-middle {
     position: absolute;
-    top: 5%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Ticketing', sans-serif;
