@@ -17,16 +17,16 @@ html, body {
 }
 
 .railway-title {
-    width: 100% !important;
+    width: 50% !important;
     margin: 0 0 0.5em 0;
     padding: 0.5em 0 0.3em 0;
     font-size: clamp(2.5em, 3vw, 4em);
     font-weight: 800;
-    text-align: left;
+    text-align: center;
     letter-spacing: 0.02em;
     line-height: 1.05;
     overflow-wrap: break-word;
-    transform: translateY(-35vw);
+    transform: translate(50%, -35vw);
 }
 
 .railway-info-container {
