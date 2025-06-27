@@ -562,7 +562,6 @@ and (max-device-width: 600px) {
     align-items: center;
     justify-content: center;
     margin: 2vw 0;
-    gap: 0.5vw;
 }
 
 .ticket {
@@ -580,6 +579,7 @@ and (max-device-width: 600px) {
     pointer-events: auto;
     position: relative;
     z-index: 2;
+    transform: translateY(0.5vw);
 }
 
 .ticket.slide-out-down {
@@ -588,18 +588,18 @@ and (max-device-width: 600px) {
 }
 
 .ticket.slide-in-up {
-    animation: slideInUp 1s forwards;
+    animation: slideInUp 2s forwards;
     z-index: 4;
 }
 
 @keyframes slideOutDown {
-    from { transform: translateY(0); opacity: 1; }
+    from { transform: translateY(0.5vw); opacity: 1; }
     to { transform: translateY(100%); opacity: 0; }
 }
 
 @keyframes slideInUp {
-    from { transform: translateY(-100%); opacity: 1; }
-    to { transform: translateY(0); opacity: 1; }
+    from { transform: translateY(-150%); opacity: 1; }
+    to { transform: translateY(0.5vw); opacity: 1; }
 }
 
 /* Responsive adjustments */
@@ -617,9 +617,8 @@ and (max-device-width: 600px) {
 .ticket-view {
     position: relative;
     width: 45vw;
-    min-height: 25vw;
+    min-height: 30vw;
     display: flex;
-    align-items: center;
     justify-content: center;
     overflow: hidden;
     padding-left: 2vw;

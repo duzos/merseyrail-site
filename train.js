@@ -196,7 +196,7 @@ function showTicket(newIndex) {
         newTicket.classList.remove('slide-in-up');
         newTicket.classList.add('active');
         isAnimating = false;
-    }, 1000);
+    }, 2000);
 
     currentTicket = newIndex;
 }
