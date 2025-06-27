@@ -734,3 +734,16 @@ and (max-device-width: 600px) {
     box-shadow: 0 0.2vw 0.4vw 0 #7a0000;
     transform: translate(50%, -45%) scale(0.97);
 }
+
+.page-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 8px 16px;
+    font-size: 1.25vw;
+    background: transparent;
+    color: #e9f5ff;
+    z-index: 1000;
+    pointer-events: none;
+    user-select: none;
+}
