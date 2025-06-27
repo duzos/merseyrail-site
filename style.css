@@ -585,18 +585,18 @@ and (max-device-width: 600px) {
 }
 
 .ticket.slide-out-down {
-    animation: slideOutDown 1s forwards;
+    animation: slideOutDown 2s forwards;
     z-index: 3;
 }
 
 .ticket.slide-in-up {
-    animation: slideInUp 2s forwards;
+    animation: slideInUp 3s forwards;
     z-index: 4;
 }
 
 @keyframes slideOutDown {
     from { transform: translateY(0.5vw); opacity: 1; }
-    to { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(150%); opacity: 0; }
 }
 
 @keyframes slideInUp {
