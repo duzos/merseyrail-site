@@ -113,7 +113,7 @@ html, body {
     background: #ffd700;
     color: #222;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 8px rgba(0,0,0,0.18);
     transition: background 0.2s;
 }
 
@@ -148,6 +148,7 @@ html, body {
     box-sizing: border-box;
     color: darkblue;
     font-size: clamp(1em, 2vw, 2em);
+    box-shadow: 0 8px 8px rgba(0,0,0,0.18);
 }
 
 .info-text-faded {
@@ -201,7 +202,7 @@ html, body {
     font-size: 1.2em;
     color: #222;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 8px rgba(0,0,0,0.18);
     z-index: 1001;
     display: flex;
     align-items: center;
@@ -704,21 +705,32 @@ and (max-device-width: 600px) {
 .print-btn {
     position: absolute;
     right: 50%;
-    bottom: 30%;
+    bottom: 28%;
     transform: translate(50%, -50%);
-    background: #d80606;
+    background: linear-gradient(180deg, #ff4747 0%, #b80000 100%);
     color: #fff;
     font-size: 2.5vw;
     font-weight: bold;
-    border: none;
+    border: 0.2vw solid #a10000;
+    border-bottom: 0.4vw solid #7a0000;
     border-radius: 1vw;
     padding: 1vw 4vw;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    box-shadow: 0 0.6vw 1.2vw 0 #a10000, 0 0.2vw 0 #fff inset;
     z-index: 20;
-    transition: background 0.2s;
+    transition:
+            background 0.2s,
+            box-shadow 0.2s,
+            transform 0.1s;
 }
 
 .print-btn:hover {
-    background: red;
+    background: linear-gradient(180deg, #ff6a3d 0%, #d80606 100%);
+    box-shadow: 0 1vw 2vw 0 #a10000, 0 0.2vw 0 #fff inset;
+}
+
+.print-btn:active {
+    background: linear-gradient(180deg, #d80606 0%, #a10000 100%);
+    box-shadow: 0 0.2vw 0.4vw 0 #7a0000;
+    transform: translate(50%, -45%) scale(0.97);
 }
