@@ -139,7 +139,8 @@ html, body {
     flex: 1;
     width: 100%;
     height: 100%;
-    background: white;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -149,10 +150,27 @@ html, body {
     color: darkblue;
     font-size: clamp(1em, 2vw, 2em);
     box-shadow: 0 8px 8px rgba(0,0,0,0.18);
+    border-radius: 18px;
 }
 
 .info-text-faded {
-    opacity: 50%;
+    opacity: 0.92;
+    color: #3a4a6b;
+    background: linear-gradient(120deg, rgba(255,255,255,0.45) 60%, rgba(230,240,255,0.25) 100%);
+}
+
+.info-text h3, .info-text h1 {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.7vw;
+    color: #1a2233;
+}
+
+@media (max-width: 900px) {
+    .info-text {
+        font-size: 2.8vw;
+        padding: 4vw 3vw;
+    }
 }
 
 .info-image {
@@ -160,6 +178,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.18);
 }
 
 .info-image img {
