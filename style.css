@@ -26,7 +26,7 @@ html, body {
     letter-spacing: 0.02em;
     line-height: 1.05;
     overflow-wrap: break-word;
-    transform: translate(50%, -35vw);
+    transform: translateX(50%);
 }
 
 .railway-info-container {
@@ -36,7 +36,6 @@ html, body {
     justify-content: center;
     padding: 2em;
     gap: 2em;
-    transform: translateY(-35vw);
     z-index: 2;
 }
 
@@ -86,7 +85,7 @@ html, body {
 
 .track-container .station-name {
     position: absolute;
-    bottom: 25.25%;
+    bottom: 38.5%;
     left: 25.25%;
     transform: translateX(-50%);
     font-size: clamp(0.5em, 1vw, 1.4em);
@@ -128,7 +127,7 @@ html, body {
     justify-content: center;
     align-items: center;
     left: 20%;
-    bottom: 40%;
+    bottom: 60%;
     transform: translate(50%, 50%);
     width: 30vw;
     height: 12vw;
@@ -211,7 +210,7 @@ html, body {
 .arrow-btn {
     position: absolute;
     left: 15%;
-    bottom: 40%;
+    bottom: 60%;
     transform: translate(50%, 50%);
     background: #ffd700;
     border: none;
@@ -248,7 +247,7 @@ html, body {
     justify-content: center;
     align-items: center;
     right: 15%;
-    bottom: 40%;
+    bottom: 60%;
     transform: translate(50%, 50%);
     width: 25vw;
     height: auto;
@@ -331,7 +330,7 @@ html, body {
 #train {
     position: absolute;
     left: 0;
-    bottom: 11.5%;
+    bottom: 18%;
     transition: left 10s cubic-bezier(0.66, 0, 0.34, 1);
     width: 100vw;
     height: 25vw;
