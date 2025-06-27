@@ -53,6 +53,26 @@ const trains = [
     new Train(507, 1978, 2024),
     new Train(777, 2024, "Present")];
 
+// Preload all train images
+function preloadTrainImages() {
+    const imageCache = [];
+    
+    trains.forEach(train => {
+        // Preload diagram images (main train display)
+        const diagramImg = new Image();
+        diagramImg.src = train.src;
+        imageCache.push(diagramImg);
+        
+        // Preload photo images (information section)
+        const photoImg = new Image();
+        photoImg.src = train.photo;
+        imageCache.push(photoImg);
+    });
+    
+    console.log(`Preloaded ${imageCache.length} train images`);
+    return imageCache;
+}
+
 let currentClass = 0;
 let queuedClass = currentClass;
 
@@ -167,6 +187,9 @@ const yearsElement = document.getElementById('information-years');
 const photoElement = document.getElementById('information-photo');
 const descriptionTitleElement = document.getElementById('train-description-title');
 const descriptionElement = document.getElementById('train-description-text');
+
+// Preload all train images for smooth transitions
+preloadTrainImages();
 
 toStation();
 setClass(element, trains[currentClass]);
