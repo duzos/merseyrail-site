@@ -168,6 +168,47 @@ const photoElement = document.getElementById('information-photo');
 const descriptionTitleElement = document.getElementById('train-description-title');
 const descriptionElement = document.getElementById('train-description-text');
 
-// INIT
 toStation();
 setClass(element, trains[currentClass]);
+
+const tickets = document.querySelectorAll('.ticket-view .ticket');
+let currentTicket = 0;
+let isAnimating = false;
+
+function showTicket(newIndex) {
+    if (isAnimating || newIndex === currentTicket) return;
+    isAnimating = true;
+
+    const oldTicket = tickets[currentTicket];
+    const newTicket = tickets[newIndex];
+
+    // Prepare new ticket
+    newTicket.style.display = 'block';
+    newTicket.classList.add('slide-in-up');
+
+    // Animate out old ticket
+    oldTicket.classList.add('slide-out-down');
+
+    setTimeout(() => {
+        oldTicket.classList.remove('active', 'slide-out-down');
+        oldTicket.style.display = 'none';
+
+        newTicket.classList.remove('slide-in-up');
+        newTicket.classList.add('active');
+        isAnimating = false;
+    }, 1000);
+
+    currentTicket = newIndex;
+}
+
+document.getElementById('ticket-next').onclick = function() {
+    const newIndex = (currentTicket + 1) % tickets.length;
+    showTicket(newIndex);
+};
+
+// Initialize
+tickets.forEach((ticket, i) => {
+    ticket.style.display = i === 0 ? 'block' : 'none';
+    console.log(`Ticket ${i} - ${ticket}`);
+    if (i === 0) ticket.classList.add('active');
+});
